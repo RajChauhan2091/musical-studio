@@ -3,6 +3,10 @@ import { RefreshCw, Lightbulb, Sparkles, Edit3, Check } from 'lucide-react';
 import { TRUCK_SHAYARI } from '../data/playlist';
 import { ColorThemeId, getColorTheme } from '../data/colorTheme';
 import { HornButton } from './HornButton';
+import truckImage from '../assets/images/desi_highway_truck_1787243699357.jpg';
+import nightBackground from '../assets/images/highway_night_bg_1787247478101.jpg';
+import sunsetBackground from '../assets/images/highway_sunset_bg_1787247494778.jpg';
+import monsoonTruckImage from '../assets/images/monsoon_night_truck_1787243716693.jpg';
 
 const TRUCK_NAMES = [
   'ट्रक वाला',
@@ -100,18 +104,18 @@ export const TruckScene: React.FC<TruckSceneProps> = ({
   };
 
   const getTruckImage = () => {
-    if (theme === 'monsoon') {
-      return '/src/assets/images/monsoon_night_truck_1787243716693.jpg';
-    }
-    return '/src/assets/images/desi_highway_truck_1787243699357.jpg';
-  };
+  if (theme === 'monsoon') {
+    return monsoonTruckImage;
+  }
+  return truckImage;
+};
 
   const getBackgroundImage = () => {
-    if (theme === 'sunset') {
-      return '/src/assets/images/highway_sunset_bg_1787247494778.jpg';
-    }
-    return '/src/assets/images/highway_night_bg_1787247478101.jpg';
-  };
+  if (theme === 'sunset') {
+    return sunsetBackground;
+  }
+  return nightBackground;
+};
 
   return (
     <div
