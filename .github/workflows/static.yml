@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -33,10 +33,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Vite React application
+      - name: Build React application
         run: npm run build
 
-      - name: Upload build
+      - name: Upload dist folder
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
