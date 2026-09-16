@@ -1,20 +1,12 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+I created you a new, original version, rather than copying the site's UI/assets:
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/d60e6e11-1e8b-471d-97a4-4bba549e4c12
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+🎵 Modern Indian music/radio design
+🌙 Dark cinematic + glass-style interface
+🎨 Completely different branding: RagaDrive
+📻 Old Gold / Love FM / Trending / Mashup Lab stations
+📺 YouTube playlist/video loader
+📱 Mobile responsive
+✨ Animated cassette + rings + waveform
+🔗 Paste any YouTube playlist URL and load it
+🚀 Pure HTML/CSS/JS — no database or server required
+☁️ Suitable for GitHub Pages, Netlify, Vercel, etc.
