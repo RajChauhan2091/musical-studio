@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-truck: 'Yatra One', cursive, system-ui;
+    --font-hindi: 'Mukta', sans-serif;
+    --font-rozha: 'Rozha One', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --theme-accent: #f59e0b;
+    --theme-glow: rgba(245, 158, 11, 0.4);
+    --theme-border: rgba(245, 158, 11, 0.5);
+  }
+}
+
+.font-truck {
+  font-family: var(--font-truck);
+}
+
+.font-hindi {
+  font-family: var(--font-hindi);
+}
+
+.font-rozha {
+  font-family: var(--font-rozha);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Frosted Glass Utilities */
+.frosted-bg {
+  background: 
+    radial-gradient(circle at 0% 0%, rgba(255, 107, 107, 0.45) 0%, transparent 45%),
+    radial-gradient(circle at 100% 0%, rgba(78, 205, 196, 0.4) 0%, transparent 45%),
+    radial-gradient(circle at 100% 100%, rgba(255, 230, 109, 0.35) 0%, transparent 45%),
+    radial-gradient(circle at 0% 100%, rgba(255, 107, 107, 0.35) 0%, transparent 45%),
+    #0c1222;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(28px) saturate(190%);
+  -webkit-backdrop-filter: blur(28px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.4);
+}
+
+.glass-panel-deep {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(32px) saturate(200%);
+  -webkit-backdrop-filter: blur(32px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+}
+
+.glass-button {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.5);
+  transform: translateY(-1px);
+}
+.glass-button:active {
+  transform: translateY(1px);
+}
+
+/* Screen shake on horn */
+@keyframes horn-shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  15% { transform: translate(-3px, 2px) rotate(-0.5deg); }
+  30% { transform: translate(3px, -2px) rotate(0.5deg); }
+  45% { transform: translate(-2px, -1px) rotate(-0.3deg); }
+  60% { transform: translate(2px, 2px) rotate(0.3deg); }
+  75% { transform: translate(-1px, 1px) rotate(0deg); }
+}
+
+.animate-horn-shake {
+  animation: horn-shake 0.35s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Subtle engine idle */
+@keyframes engine-idle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-1.5px); }
+}
+
+.animate-engine-idle {
+  animation: engine-idle 0.18s ease-in-out infinite;
+}
+
+/* Fog Drift */
+@keyframes fog-drift {
+  0% { transform: translateX(-5%); }
+  50% { transform: translateX(5%); }
+  100% { transform: translateX(-5%); }
+}
+
+.animate-fog-drift {
+  animation: fog-drift 18s ease-in-out infinite;
+}
+
+/* Spin slow for cassette spool / vinyl */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* Custom sound wave pulse */
+@keyframes ripple {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.animate-ripple {
+  animation: ripple 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Custom styled range slider */
+input[type="range"] {
+  accent-color: var(--theme-accent, #f59e0b);
+}
+
+/* Hide scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Global Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--theme-accent, #f59e0b);
+  opacity: 0.85;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px var(--theme-glow, rgba(245, 158, 11, 0.4));
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent, #f59e0b);
+  filter: brightness(1.2);
+  box-shadow: 0 0 14px var(--theme-glow, rgba(245, 158, 11, 0.6));
+}
+
+/* Firefox standard scrollbar support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-accent, #f59e0b) rgba(15, 23, 42, 0.7);
+}
+
+/* Custom Truck/Highway Cassette Slim Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+  border-radius: 9999px;
+  margin: 4px 0;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--theme-accent, #f59e0b);
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px var(--theme-glow, rgba(245, 158, 11, 0.4));
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-accent, #f59e0b);
+  filter: brightness(1.25);
+  box-shadow: 0 0 14px var(--theme-glow, rgba(245, 158, 11, 0.7));
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme-accent, #f59e0b) rgba(15, 23, 42, 0.6);
+}
+
+/* YouTube Video Container & Frame Styling */
+#yt-audio-container {
+  overflow: hidden;
+  background-color: #000000;
+  transition: opacity 0.2s ease, border-radius 0.2s ease;
+}
+
+#yt-audio-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  display: block;
+}
+
+

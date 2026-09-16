@@ -1,0 +1,6 @@
+{
+  "name": "Horn Ok Please - Desi Highway Truck Radio",
+  "description": "An interactive nostalgic Indian highway truck radio player with multi-tone pressure horns, 90s Bollywood & highway lo-fi tunes, authentic truck art shayari, and immersive road trip vibes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
